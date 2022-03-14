@@ -4,7 +4,7 @@ on beacon_initial {
 	$internalIP = replace(beacon_info($1,"internal")," ","_");
 	$computerName = replace(beacon_info($1,"computer")," ","_");
 	$userName = replace(beacon_info($1,"user")," ","_");
-	$cmd = 'python3 /Users/lintstar/Tools/CobaltStrike/SeverChan/ServerChan.py' . " --computernam " . $computerName . " --internalip " . $internalIP . " --username " . $userName;
+	$cmd = 'python3 /改我这里，改我这里，改成绝对路径/cs-wecom.py' . " --computernam " . $computerName . " --internalip " . $internalIP . " --username " . $userName;
 	println("Sending server: " . $cmd);
 	exec($cmd);
 }
